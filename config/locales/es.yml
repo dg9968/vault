@@ -1,0 +1,28 @@
+es:
+  activerecord:
+    attributes:
+      article:
+        title: "Título"
+        body: "Contenido"
+  forms:
+    messages:
+      success: "Operación exitosa!"
+    buttons:
+      edit: "Editar"
+      submit: "Enviar"
+  menu:
+    new_article: "Añadir un artículo"
+    languages:
+      lang: "Lenguaje"
+      es: "Español"
+      en: "Inglés"
+  articles:
+    index:
+      title: "Lista de artículos"
+      count: 
+        one: "%{count} artículo"
+        other: "%{count} artículos"
+    edit:
+      title: "Añadir artículo"
+    new:
+      title: "Nuevo artículo"
