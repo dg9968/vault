@@ -35,7 +35,7 @@ en:
     new_article: "Add an article"
     languages:
       lang: "Language"
-      es: "Español"
+      es: "Spanish"
       en: "English"
   articles:
     index:
