@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'rails-i18n', '~> 4.0.0'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 group :development, :test do
   gem 'sqlite3'

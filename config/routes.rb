@@ -5,6 +5,6 @@ resources :articles, only: [:index, :new, :create, :edit, :update]
 
 get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
 
-root to: 'articles#index'
+root to: 'navigator#index'
 
 end
