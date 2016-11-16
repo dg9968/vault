@@ -1,0 +1,41 @@
+es:
+  activerecord:
+    attributes:
+      article:
+        title: "Título"
+        body: "Contenido"
+  forms:
+    messages:
+      success: "Operación exitosa!"
+    buttons:
+      edit: "Editar"
+      submit: "Enviar"
+      login: "Ingresar"
+      signup: "Regístrese!"
+
+  menu:
+    new_article: "Añadir un artículo"
+    languages:
+      lang: "Lenguaje"
+      es: "Español"
+      en: "Inglés"
+  articles:
+    index:
+      title: "Lista de artículos"
+      count: 
+        one: "%{count} artículo"
+        other: "%{count} artículos"
+    edit:
+      title: "Añadir artículo"
+    new:
+      title: "Nuevo artículo"
+  navigator:
+    index:
+      question_one: "Quiere tener su retorno de impuestos a tiempo, fácil y recibir más dinero?"
+      answer_one: "Ya usted no esta solo, Vault Tax Services esta para ayudarlo.  Solo pase por nuestra oficina, deje sus documentos y nosotros nos encargamos del resto."
+      question_two: "Que nos hace diferentes?"
+      answer_two: "Años de experiencia en la preparación de impuestos con la mas alta tecnologia,  que hace mas eficiente y segura esta experiencia."
+      question_three: "Que documentos necesitamos?"
+      answer_three: "Si usted ya tiene sus documentos del ano anterior, solo revise en nuestra pagina su archivo y actualice la informacion .  Si es su primera vez con Vault Tax Service, solo llene esta forma."
+      
+  

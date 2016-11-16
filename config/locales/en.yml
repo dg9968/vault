@@ -1,0 +1,61 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  activerecord:
+    attributes:
+      article:
+        title: "Title"
+        body: "Body"
+  forms:
+    messages:
+      success: "Operation succeeded!"
+    buttons:
+      edit: "Edit"
+      submit: "Submit"
+      login: "Login"
+      signup: "Sign Up!"
+  menu:
+    new_article: "Add an article"
+    languages:
+      lang: "Language"
+      es: "Spanish"
+      en: "English"
+  articles:
+    index:
+      title: "List of articles"
+      count: 
+        one: "%{count} article"
+        other: "%{count} articles"
+    edit:
+      title: "Add article"
+    new:
+      title: "New article"
+  navigator:
+    index:
+      question_one: "Want to file your income taxes on time, with no hassle and get the most money back?"
+      answer_one: "You are not alone, we can help. Stop by our office or upload your documents and we will take care of the rest"
+      question_two: "What makes us different?"
+      answer_two: "Years of experience as tax preparers and the adaptation of technology that makes the most efficient tax preparation experience."
+      question_three: "What documents do I need?"
+      answer_three: "If you have filed your taxes with us before just log in and you will find all the documents you had the previous year. If you are a first time user of Vault Tax Service then fill out this form."
+      
+  
