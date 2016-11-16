@@ -10,9 +10,12 @@ es:
     buttons:
       edit: "Editar"
       submit: "Enviar"
+<<<<<<< HEAD
       login: "Ingresar"
       signup: "Regístrese!"
 
+=======
+>>>>>>> 55ad1f2e82c472ff18303dc74a23ae9e7f41601e
   menu:
     new_article: "Añadir un artículo"
     languages:
@@ -28,6 +31,7 @@ es:
     edit:
       title: "Añadir artículo"
     new:
+<<<<<<< HEAD
       title: "Nuevo artículo"
   navigator:
     index:
@@ -39,3 +43,6 @@ es:
       answer_three: "Si usted ya tiene sus documentos del ano anterior, solo revise en nuestra pagina su archivo y actualice la informacion .  Si es su primera vez con Vault Tax Service, solo llene esta forma."
       
   
+=======
+      title: "Nuevo artículo"
+>>>>>>> 55ad1f2e82c472ff18303dc74a23ae9e7f41601e
