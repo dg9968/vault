@@ -1,0 +1,293 @@
+<%= form_for(client) do |f| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <div class="control-group form-group">
+    <div class="control">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :born_on %>
+      <%= f.date_select :born_on, { :start_year => 1920}, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :occupation %>
+      <%= f.text_area :occupation, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :line1 %>
+      <%= f.text_field :line1, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :line2 %>
+      <%= f.text_field :line2, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :city %>
+      <%= f.text_field :city, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :state %>
+      <%= f.text_field :state, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :primary_social %>
+      <%= f.number_field :primary_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :spouse_social %>
+      <%= f.number_field :spouse_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :spouse_name %>
+      <%= f.text_field :spouse_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :spouse_born_on %>
+      <%= f.date_select :spouse_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :spouse_occupation %>
+      <%= f.text_field :spouse_occupation, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :you_dependent %>
+      <%= f.check_box :you_dependent, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :support %>
+      <%= f.check_box :support, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_name %>
+      <%= f.text_field :dependent1_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_born_on %>
+      <%= f.date_select :dependent1_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_social %>
+      <%= f.number_field :dependent1_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_relationship %>
+      <%= f.text_field :dependent1_relationship, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_home %>
+      <%= f.text_field :dependent1_home, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_disabled %>
+      <%= f.check_box :dependent1_disabled, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_student %>
+      <%= f.check_box :dependent1_student, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_name %>
+      <%= f.text_field :dependent2_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_born_on %>
+      <%= f.date_select :dependent2_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_social %>
+      <%= f.number_field :dependent2_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_relationship %>
+      <%= f.text_field :dependent2_relationship, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_home %>
+      <%= f.text_field :dependent2_home, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_disabled %>
+      <%= f.check_box :dependent2_disabled, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_student %>
+      <%= f.check_box :dependent2_student, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_name %>
+      <%= f.text_field :dependent3_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_born_on %>
+      <%= f.date_select :dependent3_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_social %>
+      <%= f.number_field :dependent3_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_relationship %>
+      <%= f.text_field :dependent3_relationship, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_home %>
+      <%= f.text_field :dependent3_home, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_disabled %>
+      <%= f.check_box :dependent3_disabled, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_student %>
+      <%= f.check_box :dependent3_student, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_name %>
+      <%= f.text_field :dependent4_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_born_on %>
+      <%= f.date_select :dependent4_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_social %>
+      <%= f.number_field :dependent4_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_relationship %>
+      <%= f.text_field :dependent4_relationship, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_home %>
+      <%= f.text_field :dependent4_home, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_disabled %>
+      <%= f.check_box :dependent4_disabled, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_student %>
+      <%= f.check_box :dependent4_student, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_name %>
+      <%= f.text_field :dependent5_name, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_born_on %>
+      <%= f.date_select :dependent5_born_on, { :start_year => 1920}, class: "form-control"    %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_social %>
+      <%= f.number_field :dependent5_social, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_relationship %>
+      <%= f.text_field :dependent5_relationship, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_home %>
+      <%= f.text_field :dependent5_home, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_disabled %>
+      <%= f.check_box :dependent5_disabled, class: "form-control"  %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_student %>
+      <%= f.check_box :dependent5_student, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent1_support %>
+      <%= f.check_box :dependent1_support, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent2_support %>
+      <%= f.check_box :dependent2_support, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent3_support %>
+      <%= f.check_box :dependent3_support, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent4_support %>
+      <%= f.check_box :dependent4_support, class: "form-control"   %>
+    </div>
+
+    <div class="control">
+      <%= f.label :dependent5_support %>
+      <%= f.check_box :dependent5_support, class: "form-control"   %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>    
+<% end %>

@@ -1,0 +1,115 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  born_on: 2016-12-17
+  occupation: MyText
+  line1: MyString
+  line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  primary_social: 1
+  spouse_social: 1
+  spouse_name: MyString
+  spouse_born_on: 2016-12-17
+  spouse_occupation: MyString
+  you_dependent: false
+  support: false
+  dependent1_name: MyString
+  dependent1_born_on: 2016-12-17
+  dependent1_social: 1
+  dependent1_relationship: MyString
+  dependent1_home: 
+  dependent1_disabled: false
+  dependent1_student: false
+  dependent2_name: MyString
+  dependent2_born_on: 2016-12-17
+  dependent2_social: 1
+  dependent2_relationship: MyString
+  dependent2_home: 
+  dependent2_disabled: false
+  dependent2_student: false
+  dependent3_name: MyString
+  dependent3_born_on: 2016-12-17
+  dependent3_social: 1
+  dependent3_relationship: MyString
+  dependent3_home: 
+  dependent3_disabled: false
+  dependent3_student: false
+  dependent4_name: MyString
+  dependent4_born_on: 2016-12-17
+  dependent4_social: 1
+  dependent4_relationship: MyString
+  dependent4_home: 
+  dependent4_disabled: false
+  dependent4_student: false
+  dependent5_name: MyString
+  dependent5_born_on: 2016-12-17
+  dependent5_social: 1
+  dependent5_relationship: MyString
+  dependent5_home: 
+  dependent5_disabled: false
+  dependent5_student: false
+  dependent1_support: false
+  dependent2_support: false
+  dependent3_support: false
+  dependent4_support: false
+  dependent5_support: false
+
+two:
+  name: MyString
+  born_on: 2016-12-17
+  occupation: MyText
+  line1: MyString
+  line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  primary_social: 1
+  spouse_social: 1
+  spouse_name: MyString
+  spouse_born_on: 2016-12-17
+  spouse_occupation: MyString
+  you_dependent: false
+  support: false
+  dependent1_name: MyString
+  dependent1_born_on: 2016-12-17
+  dependent1_social: 1
+  dependent1_relationship: MyString
+  dependent1_home: 
+  dependent1_disabled: false
+  dependent1_student: false
+  dependent2_name: MyString
+  dependent2_born_on: 2016-12-17
+  dependent2_social: 1
+  dependent2_relationship: MyString
+  dependent2_home: 
+  dependent2_disabled: false
+  dependent2_student: false
+  dependent3_name: MyString
+  dependent3_born_on: 2016-12-17
+  dependent3_social: 1
+  dependent3_relationship: MyString
+  dependent3_home: 
+  dependent3_disabled: false
+  dependent3_student: false
+  dependent4_name: MyString
+  dependent4_born_on: 2016-12-17
+  dependent4_social: 1
+  dependent4_relationship: MyString
+  dependent4_home: 
+  dependent4_disabled: false
+  dependent4_student: false
+  dependent5_name: MyString
+  dependent5_born_on: 2016-12-17
+  dependent5_social: 1
+  dependent5_relationship: MyString
+  dependent5_home: 
+  dependent5_disabled: false
+  dependent5_student: false
+  dependent1_support: false
+  dependent2_support: false
+  dependent3_support: false
+  dependent4_support: false
+  dependent5_support: false

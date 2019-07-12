@@ -25,6 +25,8 @@ en:
       article:
         title: "Title"
         body: "Body"
+  header:
+    welcome: "Welcome"
   forms:
     messages:
       success: "Operation succeeded!"
@@ -33,8 +35,12 @@ en:
       submit: "Submit"
       login: "Login"
       signup: "Sign Up!"
+      new_user: "New user?"
   menu:
     new_article: "Add an article"
+    about: "About"
+    services: "Services"
+    contact: "Contact"
     languages:
       lang: "Language"
       es: "Spanish"

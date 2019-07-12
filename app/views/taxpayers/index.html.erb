@@ -1,0 +1,84 @@
+<% provide(:title) %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Taxpayers Documents</h1>
+<div class="row">
+  <div class="col-md-4">
+      <section>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            Individual Tax Return
+          </a>
+              <li class="list-group-item"><%= link_to "2015 Tax Return", "files/f1040.pdf" %></li>
+              <li class="list-group-item"><%= link_to "2014 Tax Return", "files/f1040--2014.pdf" %></li>
+      </div>
+
+    </section>
+    
+  </div>
+  <div class="col-md-4">
+
+
+    <section>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            Employee Forms
+          </a>
+              <li class="list-group-item"><%= link_to "W2", "files/w2.pdf" %></li>
+              <li class="list-group-item"><%= link_to "1099-misc", "files/1099.pdf" %></li>
+      </div>
+
+    </section>
+</div>
+</div>
+
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<!-- Split button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+
+
+<br />
+<%= link_to "New Document", new_taxpayer_path, class: "btn btn-primary" %>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Download Link</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @taxpayers.each do |taxpayer| %>
+      <tr>
+        <td><%= taxpayer.content %></td>
+        <td><%= taxpayer.user_id %></td>
+        <td><%= taxpayer.id %></td>
+        <td><%= link_to "Download Document",taxpayer.attachment_url %></td>
+        <td><%= button_to "Delete",  taxpayer, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete?" %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+<li id="taxpayer-<%= taxpayer.id %>">
+  <%= link_to gravatar_for(taxpayer.user, size: 50), taxpayer.user %>
+  <span class="user"><%= link_to taxpayer.user.name, taxpayer.user %></span>
+  <span class="content">
+  	<%= taxpayer.content %></span>
+  	<%= image_tag taxpayer.attachment.url(:thumb) if taxpayer.attachment? %>
+   
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(taxpayer.created_at) %> ago.
+    <%= link_to "delete", taxpayer, method: :delete,
+    						data: { confirm: "You sure?" } %>
+  </span>
+</li>

@@ -1,0 +1,41 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Profile
+                    <small>Primary contact</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li>Home</a>
+                    </li>
+                    <li class="active">About</li>
+                </ol>
+            </div>
+</div>    
+<section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+
+      </h1>
+</section>
+
+<section>
+<p>It is important to make sure your contact information is current, take a moment to verify its accuracy</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h3>Address</h3>
+      <% if @user.address.nil? %>
+        
+        <%= render partial: "addresses/form", locals: {addressable: @user} %>
+      <% else %>
+        <%= form_for @user, :html => {:class => "form-horizontal"} do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= f.fields_for :address do |address| %>
+            <%= render :partial => 'shared/address', :locals => {:f => address} %>
+            <% end %>
+            <%= f.submit "Update my address", class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+  

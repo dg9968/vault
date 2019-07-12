@@ -1,57 +1,93 @@
-<link rel="alternate" hreflang="<%= locale %>">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114673798-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114673798-1');
+</script>
+
 <div class="container">
 	  	<div class="col-md-4">
-	 		<%= image_tag("web_logo.png", :alt => "Vault Logo") %>
+	 		<%= link_to image_tag("web_logo.png", :alt => "Vault Logo"), root_path %>
 		</div>
 		<div class="col-md-4 text-center">
-	 		<h1>Welcome to Vault Tax Service</h1>
+	 		<h1> <%= t('header.welcome') %></h1>
 		</div>
-		<div class="col-md-4 text-center">
-			<%= link_to t('forms.buttons.login'), new_article_path, class: "btn btn-primary" %>
-			<p>New user? <%= link_to t('forms.buttons.signup'), root_path %></p>
-	 		<h3><%= icon('phone') %> Call us at (786) 422-5015</h3>
-		</div>
-	</div>
-	<div class="navbar navbar-default navbar-static-top">
-	    <div class="container">
-	      <div class="navbar-header">
-	        <%= link_to 'Vault Tax Service', root_path, class: 'navbar-brand' %>
-	      </div>
+		<% if logged_in? %>
+			<h3><%= icon('phone') %> Call us at (786) 422-5015</h3>
+        <% else %>
+			<div class="col-md-4 text-center">
+				<%= link_to t('forms.buttons.login'), login_path, class: "btn btn-primary", style: "color: #fff;" %>
+				<p><%= link_to t('forms.buttons.new_user') %> <%= link_to t('forms.buttons.signup'), root_path %></p>
+		 		<h3><%= icon('phone') %> Call us at (786) 422-5015</h3>
+			</div>
+        <% end %>
+</div>
+<nav class="navbar navbar-default navbar-static-top" style="background-image: linear-gradient(to bottom, white 0%, LightSteelBlue 100%);" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Vault Tax Service Corp</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+               <li class="<%= is_active?('/about') %>"><a href="/about"><%= t('menu.about') %></a></li>
+               <li class="<%= is_active?('/services.html') %>"><a href="/services"><%= t('menu.services') %></a></li>
+               <li class="<%= is_active?('/contactus.html') %>"><a href="/contact"><%= t('menu.contact') %></a></li>
+               
+               <li class="dropdown">
+        			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          				<%= t('menu.languages.lang') %>
+          				<span class="caret"></span>
+        			</a>
+        				<ul class="dropdown-menu" role="menu">
+          					<li>
+            					<%= link_to t('menu.languages.en'), change_locale_path(:en) %>
+          					</li>
+          					<li>
+            					<%= link_to t('menu.languages.es'), change_locale_path(:es) %>
+          					</li>
+        				</ul>
+      			</li>
+    	  
+               
+               
+                <% if logged_in? %>
+                    <li><%= link_to "Tax Resources", taxpayers_path %></li>
+                        <% if current_user.admin? %>
+                            <li><%= link_to "Client Data Sheet", clients_path %></li>
+                            <li><%= link_to "Prospects", prospects_path %></li>
+                        <% else %>
+                        <% end %>    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Account <b class="caret"></b>
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><%= link_to "Profile", current_user %></li>
+                        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                        <li class="divider"></li>
+                        <li>
+                        <%= link_to "Log out", logout_path, method: "delete" %>
+                    </li>
+                    </ul>
+                    </li>
+                <% else %>
+                <% end %>
+               
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-	      <ul class="nav navbar-nav navbar">
-	        <li><%= link_to t('menu.new_article'), new_article_path %></li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-      		<li class="dropdown">
-        		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          		<%= t('menu.languages.lang') %>
-          	<span class="caret"></span>
-        		</a>
-        		<ul class="dropdown-menu" role="menu">
-          			<li>
-            			<%= link_to t('menu.languages.en'), change_locale_path(:en) %>
-          			</li>
-          			<li>
-            			<%= link_to t('menu.languages.es'), change_locale_path(:es) %>
-          			</li>
-        		</ul>
-      		</li>
-    	  </ul>
-
-
-	    </div>
-	  </div>
-
-	  <div class="container">
-	    <% flash.each do |key, value| %>
-	      <div class="alert alert-<%= key %>">
-	        <%= value %>
-	      </div>
-	    <% end %>
-
-	    <div class="page-header">
-	      <h1><%= yield :page_header %></h1>
-	    </div>
-
-	    <%= yield %>
-	  </div>

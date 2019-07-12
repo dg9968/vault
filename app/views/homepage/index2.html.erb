@@ -1,0 +1,99 @@
+
+
+ 
+
+    <!-- Page Content -->
+    <div class="container">
+        <% if logged_in? %>
+          
+          <div class="row">
+            <aside class="col-md-4">
+              <section class="user_info">
+                <%= render 'shared/user_info' %>
+              </section>
+              <section class="stats">
+                <%= render 'shared/stats' %>
+              </section>
+              <section class="address_form">
+                <%= render 'shared/micropost_form' %>
+              </section>
+            </aside>
+            <div class="col-md-4">
+                <h3>Micropost Feed</h3>
+                <%= render 'shared/feed' %>
+            </div>
+            
+       
+      
+  </div>
+          </div>
+        <% else %>
+
+
+            <!-- Marketing Icons Section -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Welcome to Dame Consulting
+                    </h1>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fa fa-fw fa-briefcase"></i> Accounting</h4>
+                        <p class ="headline">Keeping accurate financial accounts is a key to smart decision taking. We will review your process and streamline a solution for you. </p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fa fa-fw fa-book"></i> Bookkeeping</h4>
+                    <p class ="headline">As technology evolves tools that were only available to accountants are accesible to everyone. Choosing the right tools and even outsourcing some of the work load are solutions that we can offer.</p>
+                    <%= link_to "Learn More",   contact_path, :class => "btn btn-default" %>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fa fa-fw fa-folder-open"></i> Tax Preparation</h4>
+                    <p class ="headline">Income taxes, payroll taxes, sales and use tax, reemployment and any other your company may need we can help you summarize your information and present in a timely and reliable fashion.</p>
+                    <a href="#" class="btn btn-default">Learn More</a>
+                </div>
+                <div class="col-md-3">
+                    <h4><i class="fa fa-fw fa-laptop"></i> Quickbooks Setup</h4>
+                        <p class ="headline">If you need help setting up and getting started with Quickbooks online, give us a call.</p>
+                    </div>
+                    <a href="#" class="btn btn-default">Learn More</a>
+                </div>
+            </div>
+            
+            <hr>
+
+            <!-- Call to Action Section -->
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p></p>
+                    </div>
+                    <div class="col-md-4">
+                        <%= link_to "SIGN UP NOW!", signup_path, class: "btn btn-lg btn-default btn-block" %>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+
+
+            <% end %>
+        </div>
+        <!-- /.row -->
+
+        
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        
+
+        
+
+        <!-- Footer -->
+        
+
+    </div>
+
+

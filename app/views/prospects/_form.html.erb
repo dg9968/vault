@@ -1,0 +1,35 @@
+<%= form_for(@prospect) do |f| %>
+  <% if @prospect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prospect.errors.count, "error") %> prohibited this prospect from being saved:</h2>
+
+      <ul>
+      <% @prospect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="control-group form-group">
+    <div class="controls">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="controls">
+      <%= f.label :phone %><br>
+      <%= f.telephone_field :phone, class: 'form-control' %>
+    </div>
+    <div class="controls">
+      <%= f.label :email %><br>
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+    <div class="controls">
+      <%= f.label :message %><br>
+      <%= f.text_area :message, class: 'form-control' %>
+    </div>
+    <div class="controls">
+      <%= f.submit 'send it over', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

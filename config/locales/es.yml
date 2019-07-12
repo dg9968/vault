@@ -4,6 +4,8 @@ es:
       article:
         title: "Título"
         body: "Contenido"
+  header:
+    welcome: "Bienvenidos"
   forms:
     messages:
       success: "Operación exitosa!"
@@ -12,8 +14,12 @@ es:
       submit: "Enviar"
       login: "Ingresar"
       signup: "Regístrese!"
+      new_user: "Nuevo usuario?"
   menu:
     new_article: "Añadir un artículo"
+    about: "Acerca de Nosotros"
+    services: "Servicios que ofrecemos"
+    contact: "Contactanos"
     languages:
       lang: "Lenguaje"
       es: "Español"
